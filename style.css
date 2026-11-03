@@ -1,0 +1,250 @@
+/* 전체 기본 스타일 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본 배경 및 폰트 설정 */
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.5;
+    padding: 20px 10px;
+}
+
+/* 중앙 정렬용 컨테이너 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 헤더 레이아웃 스타일 */
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* 메인 타이틀 스타일 */
+.header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* 시도 선택 드롭다운 영역 */
+.select-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 선택 라벨 텍스트 스타일 */
+.select-box label {
+    font-weight: 600;
+}
+
+/* 드롭다운 셀렉트 박스 스타일 */
+.select-box select {
+    padding: 8px 14px;
+    border: 1px solid #ccd0d5;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+/* 평균 수치 카드 섹션 */
+.summary-section {
+    margin-bottom: 20px;
+}
+
+/* 지역 평균 카드 스타일 */
+.average-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 평균 타이틀 스타일 */
+.average-card h2 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* 평균 미세먼지 큰 숫자 표시 */
+.average-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1a73e8;
+    margin-bottom: 6px;
+}
+
+/* 수치 단위 글자 크기 조정 */
+.average-value span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #777;
+}
+
+/* 평균 상태 문구 스타일 */
+.average-status {
+    font-size: 0.95rem;
+    color: #888;
+}
+
+/* 범례 영역 스타일 */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* 범례 뱃지 기본 스타일 */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* 측정소 목록 그리드 레이아웃 */
+.station-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+/* 측정소 카드 기본 스타일 */
+.station-card {
+    border-radius: 12px;
+    padding: 18px;
+    color: #ffffff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+}
+
+/* 카드 마우스 호버 효과 */
+.station-card:hover {
+    transform: translateY(-3px);
+}
+
+/* 카드 상단 측정소 이름과 등급 표시 줄 */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+}
+
+/* 측정소 이름 스타일 */
+.station-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* 카드 내부 등급 뱃지 스타일 */
+.grade-text {
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+/* 미세먼지 정보 목록 스타일 */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+/* 측정 항목 한 줄 스타일 */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+}
+
+/* 수치 강조 텍스트 */
+.info-row strong {
+    font-size: 1rem;
+}
+
+/* 카드 하단 측정 시간 스타일 */
+.card-bottom {
+    font-size: 0.8rem;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* 등급 1: 파랑 (좋음) */
+.grade-1 {
+    background-color: #2196F3;
+}
+
+/* 등급 2: 초록 (보통) */
+.grade-2 {
+    background-color: #4CAF50;
+}
+
+/* 등급 3: 주황 (나쁨) */
+.grade-3 {
+    background-color: #FF9800;
+}
+
+/* 등급 4: 빨강 (매우나쁨) */
+.grade-4 {
+    background-color: #F44336;
+}
+
+/* 등급 없음 / 미측정: 회색 */
+.grade-unknown {
+    background-color: #8E99A2;
+}
+
+/* 안내 및 에러 메시지 스타일 */
+.message-box {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    color: #666;
+    font-size: 1.05rem;
+}
+
+/* 모바일 화면 반응형 미디어 쿼리 */
+@media (max-width: 600px) {
+    /* 모바일에서는 헤더 아이템을 세로로 배치 */
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    /* 모바일 드롭다운 너비 100% 확장 */
+    .select-box select {
+        flex: 1;
+    }
+    /* 모바일 평균 수치 글자 크기 축소 */
+    .average-value {
+        font-size: 2.4rem;
+    }
+}
+
